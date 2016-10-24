@@ -41,6 +41,9 @@ public class User {
         calendar.setTime(getDateOfBirth());
         int year =calendar.get(Calendar.YEAR);
         return currentYear-year;
+        /**
+         * второй способ написания метода  getAge()
+        */
         /*long ageNow = new Date().getTime() - getDateOfBirthteOfBirth().getTime();
 
         Date age = new Date(ageNow);
