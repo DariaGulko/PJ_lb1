@@ -1,5 +1,12 @@
 package nure.ua.hulko.daria.test.java.db;
+import nure.ua.hulko.daria.main.java.User;
+import nure.ua.hulko.daria.main.java.db.ConnectionFactory;
+import nure.ua.hulko.daria.main.java.db.DatabaseException;
+import nure.ua.hulko.daria.main.java.db.UserDao;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 /**
  * Created by Darusya Gulko on 24.11.2016.
  */

@@ -8,7 +8,7 @@ import java.util.Properties;
  */
 public abstract class DaoFactory {
 
-    protected static final String USER_DAO = "dao.com.kn146.kostia.java.1.db.UserDao";
+    protected static final String USER_DAO = "dao.nure.ua.hulko.daria.main.java.db.UserDao";
     private static final String DAO_FACTORY = "dao.factory";
     protected static Properties properties;
 

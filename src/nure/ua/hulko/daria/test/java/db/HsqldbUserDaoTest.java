@@ -4,10 +4,21 @@ package nure.ua.hulko.daria.test.java.db;
  * Created by Darusya Gulko on 27.11.2016.
  */
 import nure.ua.hulko.daria.main.java.User;
+import nure.ua.hulko.daria.main.java.db.ConnectionFactory;
+import nure.ua.hulko.daria.main.java.db.ConnectionFactoryImpl;
+import nure.ua.hulko.daria.main.java.db.DatabaseException;
 import nure.ua.hulko.daria.main.java.db.HsqldbUserDao;
 import org.dbunit.DatabaseTestCase;
+import org.dbunit.database.DatabaseConnection;
+import org.dbunit.database.IDatabaseConnection;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.dataset.xml.XmlDataSet;
+import org.junit.Test;
+
+import java.util.Collection;
 import java.util.Date;
 
+import static org.junit.Assert.assertNotEquals;
 
 
 public class HsqldbUserDaoTest extends DatabaseTestCase {
@@ -31,16 +42,16 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
     @Override
     public void setUp() throws Exception {
         super.setUp();
-        dao = new HsqlUserDao(connectionFactory);
+        dao = new HsqldbUserDao(connectionFactory);
     }
 
     @Test
     public void testCreate() throws Exception {
         try {
             User user = new User();
-            user.setFirstname("John");
-            user.setLastNam("Smith");
-            user.setDateOfBirthd(new Date());
+            user.setFirstName("John");
+            user.setLastName("Smith");
+            user.setDateOfBirth(new Date());
             assertNull(user.getId());
             user = dao.create(user);
             assertNull(user);
