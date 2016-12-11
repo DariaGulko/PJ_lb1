@@ -13,6 +13,18 @@ public class User {
     private String lastName;
     private Date dateOfBirth;
 
+    public User(String firstname, String lastNam, Date dateOfBirthd) {
+        this.firstName = firstname;
+        this.lastName = lastNam;
+        this.dateOfBirth = dateOfBirthd;
+    }
+
+    public User(Long id, String firstname, String lastNam, Date dateOfBirthd) {
+        this.id = id;
+        this.firstName = firstname;
+        this.lastName= lastNam;
+        this.dateOfBirth = dateOfBirthd;
+    }
     public Long getId() {
         return id;
     }
@@ -55,4 +67,17 @@ public class User {
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id != null ? id.equals(user.id) : user.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 }
+
