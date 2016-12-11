@@ -1,8 +1,5 @@
 package nure.ua.hulko.daria.main.java;
 
-
-import sun.util.resources.LocaleData;
-
 import java.util.Calendar;
 import java.util.Date;
 
@@ -10,16 +7,12 @@ import java.util.Date;
  * Created by User on 23.10.2016.
  */
 public class User {
-    /**
-    * создаем переменные
-    * */
+
     private Long id;
     private String firstName;
     private String lastName;
     private Date dateOfBirth;
-/**
- * Устанавливаем для переменных методы доступа
- */
+
     public Long getId() {
         return id;
     }
@@ -41,14 +34,6 @@ public class User {
         calendar.setTime(getDateOfBirth());
         int year =calendar.get(Calendar.YEAR);
         return currentYear-year;
-        /**
-         * второй способ написания метода  getAge()
-        */
-        /*long ageNow = new Date().getTime() - getDateOfBirthteOfBirth().getTime();
-
-        Date age = new Date(ageNow);
-
-        return age.getYear();*/
     }
 
     public void setFirstName(String firstName) {

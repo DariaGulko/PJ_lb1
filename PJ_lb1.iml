@@ -17,5 +17,10 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="dbunit-2.5.3" level="project" />
+    <orderEntry type="library" name="hsqldb" level="project" />
+    <orderEntry type="library" name="dbunit-extractor" level="project" />
+    <orderEntry type="library" name="apidocs" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
