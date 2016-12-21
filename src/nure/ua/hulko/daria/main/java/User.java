@@ -25,6 +25,11 @@ public class User {
         this.lastName= lastNam;
         this.dateOfBirth = dateOfBirthd;
     }
+
+    public User() {
+
+    }
+
     public Long getId() {
         return id;
     }
