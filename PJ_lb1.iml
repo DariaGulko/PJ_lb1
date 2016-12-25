@@ -22,5 +22,6 @@
     <orderEntry type="library" name="dbunit-extractor" level="project" />
     <orderEntry type="library" name="apidocs" level="project" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="jade" level="project" />
   </component>
 </module>
